@@ -2,8 +2,6 @@ import java.util.*;
 
 // 1. Contains duplicate - Given an array of numbers, return true if any value appears at least twice in the array and otherwise eg nums = [1,2,3,1] - true
 
-
-
 // class ContainsDuplicate{
 //     public static boolean isDuplicate(int[] arr){
 //         Set<Integer> nums = new HashSet<>();
@@ -340,27 +338,84 @@ import java.util.*;
 
 // 10: Given a string s, return true if is a palindrome, or false otherwise eg: s = "A man, a plan, a canal:panama"
 
-class Palindrome{
-    public static boolean isPalindrome(String s){
-        String cleanedStr = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
+// class Palindrome{
+//     public static boolean isPalindrome(String s){
+//         String cleanedStr = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();
 
-        int start = 0;
-        int end = cleanedStr.length() - 1;
+//         int start = 0;
+//         int end = cleanedStr.length() - 1;
 
-        while(start < end){
-            if(cleanedStr.charAt(start) != cleanedStr.charAt(end)){
-                return false;
-            }
-            start++;
-            end--;
-        }
-        return true;
-    }
+//         while(start < end){
+//             if(cleanedStr.charAt(start) != cleanedStr.charAt(end)){
+//                 return false;
+//             }
+//             start++;
+//             end--;
+//         }
+//         return true;
+//     }
+//     public static void main(String[] args){
+//         String s = "A man, a plan, a canal:panama";
+//         System.out.println(isPalindrome(s));
+//     }
+// }
+
+
+// class Bank{
+//     public static int h(int[][] m){
+//         int count = 0;
+//         for(int[] customer: m){
+//             int c = 0;
+//             for(int b: customer){
+//                 c += b;
+//             }
+//             count = Math.max(count, c);
+//         }
+//         return count;
+//     }
+//     public static void main(String[] args){
+//          int[][] s = {{1,2,3},{2,3,4},{1,2,1}};
+//         System.out.println(h(s));
+//      }
+// }
+
+class NumberOfSteps{
     public static void main(String[] args){
-        String s = "A man, a plan, a canal:panama";
-        System.out.println(isPalindrome(s));
+        int c = 8;
+        System.out.println(steps(c));
+    }
+
+    public static int steps(int num){
+        int count = 0;
+        while(num > 0){
+            if(num % 2 == 0){
+                num /= 2;
+            }else{
+                num -= 1;
+            }
+            count++;
+        }
+        return count;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
