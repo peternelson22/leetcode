@@ -123,7 +123,7 @@ import java.util.*;
 // }
 
 
-// 6. Given an int of nums, return an array ans such that ans[i] is equal to the product of all the elements of nums execpt nums[i] 
+// 6. Given an int of nums, return an array ans such that ans[i] is equal to the product of all the elements of nums execept nums[i] 
 
 // class ProductOfArrExceptSelf{
 //     public static int[] productOfArr(int[] nums){
