@@ -2,6 +2,10 @@
 
 class RainWater{
     public static int maxRainTrapped(int[] height){
+        if (height.length <= 2) {
+            return 0; // No trapped water with less than three bars
+        }
+        
         int left = 0;
         int right = height.length - 1;
 
