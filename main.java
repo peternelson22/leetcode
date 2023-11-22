@@ -379,25 +379,96 @@ import java.util.*;
 //      }
 // }
 
-class NumberOfSteps{
-    public static void main(String[] args){
-        int c = 8;
-        System.out.println(steps(c));
-    }
+// class NumberOfSteps{
+//     public static void main(String[] args){
+//         int c = 8;
+//         System.out.println(steps(c));
+//     }
 
-    public static int steps(int num){
-        int count = 0;
-        while(num > 0){
-            if(num % 2 == 0){
-                num /= 2;
-            }else{
-                num -= 1;
+//     public static int steps(int num){
+//         int count = 0;
+//         while(num > 0){
+//             if(num % 2 == 0){
+//                 num /= 2;
+//             }else{
+//                 num -= 1;
+//             }
+//             count++;
+//         }
+//         return count;
+//     }
+// }
+// class MoveZeroes{
+//     public static void moveZeroes(int[] arr){
+
+//         for(int i = 0, j = 0; i < arr.length; i++){
+//             if(arr[i] != 0 && arr[j] == 0){
+//                 int temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+
+//             if(arr[j] != 0){
+//                 j++;
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int[] nums = {0, 1, 0, 3, 12};
+
+//         System.out.println("Original Array: " + Arrays.toString(nums));
+
+//         moveZeroes(nums);
+
+//         System.out.println("Array After Moving Zeroes: " + Arrays.toString(nums));
+//     }
+// }
+
+class SecondMinimumValue{
+    public static int secondMin(int[] arr){
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] > max){
+                secondMax = max;
+                max = arr[i];
+            }else if(arr[i] > secondMax && arr[i] != max){
+                secondMax = arr[i];
             }
-            count++;
         }
-        return count;
+        return secondMax;
+    }
+     public static void main(String[] args) {
+        int[] nums = {0, 1, 0, 3, 12};
+        
+        System.out.println(secondMin(nums));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
