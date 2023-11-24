@@ -8,9 +8,8 @@ public class Anagram{
         for(char c: s.toCharArray()){
             hash.put(c, hash.getOrDefault(c, 0) + 1);
         }
-        for(char c: s.toCharArray()){
+        for(char c: t.toCharArray()){
             hash.put(c, hash.getOrDefault(c, 0) - 1);
-        System.out.println(hash.values());
         }
         for(int count: hash.values()){
             if(count != 0){
@@ -20,6 +19,6 @@ public class Anagram{
         return true;
     }
     public static void main(String[] args){
-         System.out.println(isAnagram("anagram", "nagarnm"));
+         System.out.println(isAnagram("anagram", "nagaram"));
      }
 }

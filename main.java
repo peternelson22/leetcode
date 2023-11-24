@@ -424,27 +424,29 @@ import java.util.*;
 //     }
 // }
 
-class SecondMinimumValue{
-    public static int secondMin(int[] arr){
-        int max = Integer.MIN_VALUE;
-        int secondMax = Integer.MIN_VALUE;
+// class SecondMinimumValue{
+//     public static int secondMin(int[] arr){
+//         int max = Integer.MIN_VALUE;
+//         int secondMax = Integer.MIN_VALUE;
 
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] > max){
-                secondMax = max;
-                max = arr[i];
-            }else if(arr[i] > secondMax && arr[i] != max){
-                secondMax = arr[i];
-            }
-        }
-        return secondMax;
-    }
-     public static void main(String[] args) {
-        int[] nums = {0, 1, 0, 3, 12};
+//         for(int i=0; i<arr.length; i++){
+//             if(arr[i] > max){
+//                 secondMax = max;
+//                 max = arr[i];
+//             }else if(arr[i] > secondMax && arr[i] != max){
+//                 secondMax = arr[i];
+//             }
+//         }
+//         return secondMax;
+//     }
+//      public static void main(String[] args) {
+//         int[] nums = {0, 1, 0, 3, 12};
         
-        System.out.println(secondMin(nums));
-    }
-}
+//         System.out.println(secondMin(nums));
+//     }
+// }
+
+
 
 
 
